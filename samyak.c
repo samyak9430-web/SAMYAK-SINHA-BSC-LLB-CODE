@@ -1,10 +1,14 @@
 #include <stdio.h>
 
 int main() {
-    int number1, number2, sum;
-    printf("Enter two integers: ");
-    scanf("%d %d", &number1, &number2);
-    sum = number1 + number2;
-    printf("The sum of %d and %d is %d.\n", number1, number2, sum);
-     return 0;
+    int num;
+    printf("Enter an integer: ");
+    scanf("%d", &num);
+    if (num % 2 == 0) {
+        printf("%d is even.\n", num);
+    } else {
+        printf("%d is odd.\n", num);
+    }
+
+    return 0;
 }
