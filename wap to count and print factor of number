@@ -1,0 +1,44 @@
+#include <stdio.h>
+
+
+void printAndCountFactors(int num) {
+    int count = 0;
+
+
+    if (num == 0) {
+        printf("Every number is a factor of 0.\n");
+        return;
+    } else if (num < 0) {
+        printf("Factors of %d (considering absolute value):\n", num);
+        num = -num;
+    } else {
+        printf("Factors of %d:\n", num);
+    }
+
+
+    for (int i = 1; i <= num; i++) {
+        if (num % i == 0) {
+            printf("%d ", i);
+            count++;
+        }
+    }
+
+
+    printf("\nTotal number of factors: %d\n", count);
+}
+
+int main() {
+    int number;
+
+
+    printf("Enter an integer: ");
+    if (scanf("%d", &number) != 1) {
+        printf("Invalid input. Please enter an integer.\n");
+        return 1;
+    }
+
+
+    printAndCountFactors(number);
+
+    return 0;
+}
